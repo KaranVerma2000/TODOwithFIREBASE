@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fRAGMENTS.LaunchFragment"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/Appname"
+        android:layout_width="336dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="cursive"
+        android:text="TO-DO LIST"
+        android:textColor="@color/teal_200"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="213dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="384dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Add Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Appname" />
+
+    <Button
+        android:id="@+id/vb"
+        android:layout_width="213dp"
+        android:layout_height="66dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="View Items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Appname">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ctitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="Title :"
+            android:textColor="#1AB5DC"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ctitleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ctitle"
+            android:background="@color/black"
+            android:gravity="center"
+            android:minHeight="47dp"
+            android:paddingVertical="10dp"
+            android:text="........."
+            android:textColor="@color/teal_200"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:fontFamily="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cdescname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ctitleEdit"
+            android:background="@color/black"
+            android:minHeight="47dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="07dp"
+            android:text="Description :"
+            android:textColor="#1AB5DC"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/cdescEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cdescname"
+            android:background="@color/black"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:paddingTop="07dp"
+            android:text="..........."
+            android:textColor="@color/teal_200"
+            android:textSize="28sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="03dp"
+    android:background="@color/black"
+    app:cardCornerRadius="35dp"
+    android:layout_marginTop="03dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4C4343"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="Title :"
+            android:textColor="#1AB5DC"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleName"
+            android:background="#4C4343"
+            android:minHeight="47dp"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text=""
+            android:textColor="@color/teal_200"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:fontFamily="serif"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleEdit"
+            android:paddingLeft="20dp"
+            android:paddingTop="07dp"
+            android:minHeight="47dp"
+            android:text="Description :"
+            android:background="#4C4343"
+            android:textColor="#1AB5DC"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace"/>
+
+        <TextView
+            android:id="@+id/descEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descname"
+            android:paddingTop="07dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/teal_200"
+            android:background="#4C4343"
+            android:fontFamily="serif"
+            android:textSize="28sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
