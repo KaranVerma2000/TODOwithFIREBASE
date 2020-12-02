@@ -13,8 +13,7 @@
         <action
             android:id="@+id/actionAddnote"
             app:destination="@id/addFragment"
-            app:popUpTo="@id/addFragment"
-            app:popUpToInclusive="true" />
+            app:enterAnim="@android:anim/slide_in_left" />
         <action
             android:id="@+id/actionShow"
             app:destination="@id/showFragment" />
@@ -23,16 +22,7 @@
         android:id="@+id/addFragment"
         android:name="com.example.firebasetodo.fRAGMENTS.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" >
-        <action
-            android:id="@+id/actionCancel"
-            app:destination="@id/launchFragment"
-            app:popUpTo="@id/addFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/actionSAVE"
-            app:destination="@id/launchFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/showFragment"
         android:name="com.example.firebasetodo.fRAGMENTS.ShowFragment"
@@ -40,17 +30,18 @@
         tools:layout="@layout/fragment_show" >
         <action
             android:id="@+id/actionUpdate"
-            app:destination="@id/update" />
+            app:destination="@id/update"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/update"
         android:name="com.example.firebasetodo.fRAGMENTS.update"
         android:label="fragment_update"
         tools:layout="@layout/fragment_update" >
-        <action
-            android:id="@+id/actionupdated"
-            app:destination="@id/showFragment"
-            app:popUpTo="@id/update"
-            app:popUpToInclusive="true" />
+        <argument
+            android:name="value"
+            app:argType="com.example.firebasetodo.modal"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 </navigation>

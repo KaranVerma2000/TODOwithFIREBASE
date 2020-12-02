@@ -1,6 +1,7 @@
 package com.example.firebasetodo.fRAGMENTS
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_show.*
 import java.util.*
 import java.util.Collections.reverse
 
@@ -24,6 +26,7 @@ class ShowFragment : Fragment() {
 
     lateinit var recycle : RecyclerView
     lateinit var modalList : MutableList<modal>
+    var flag = 0
 
 
 
@@ -34,7 +37,6 @@ class ShowFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_show, container, false)
         modalList = mutableListOf()
         recycle = view.findViewById(R.id.recycle)
-
         return view
     }
 
@@ -53,6 +55,10 @@ class ShowFragment : Fragment() {
                     }
                     Collections.reverse(modalList)
                     recycle.adapter = RecordAdapter(modalList)
+                    flag = RecordAdapter(modalList).add()
+                    if(flag >= 3) {
+                        warning?.visibility = View.GONE
+                    }
                 }
             }
 

@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     android:layout_marginBottom="03dp"
     android:background="@color/black"
     app:cardCornerRadius="35dp"
@@ -19,58 +21,98 @@
             android:id="@+id/titleName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#4C4343"
-            android:paddingLeft="20dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="30dp"
             android:paddingTop="10dp"
             android:text="Title :"
-            android:textColor="#1AB5DC"
+            android:textColor="#030404"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:fontFamily="monospace"/>
+            app:fontFamily="monospace" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titleName"
-            android:background="#4C4343"
-            android:minHeight="47dp"
+            android:background="#FFFFFF"
             android:gravity="center"
+            android:minHeight="47dp"
+            android:paddingLeft="5dp"
             android:paddingVertical="10dp"
             android:text=""
-            android:textColor="@color/teal_200"
+            android:textColor="#050505"
             android:textSize="28sp"
             android:textStyle="italic"
-            app:fontFamily="serif"/>
+            app:fontFamily="serif" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/descname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titleEdit"
-            android:paddingLeft="20dp"
-            android:paddingTop="07dp"
+            android:background="#FFFFFF"
             android:minHeight="47dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="07dp"
             android:text="Description :"
-            android:background="#4C4343"
-            android:textColor="#1AB5DC"
+            android:textColor="#0A0B0B"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:fontFamily="monospace"/>
+            app:fontFamily="monospace" />
 
         <TextView
             android:id="@+id/descEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/descname"
-            android:paddingTop="07dp"
-            android:gravity="center"
-            android:text=""
-            android:textColor="@color/teal_200"
-            android:background="#4C4343"
+            android:background="#FFFFFF"
             android:fontFamily="serif"
+            android:gravity="center"
+            android:paddingTop="07dp"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="#020202"
             android:textSize="28sp"
+            android:paddingBottom="05dp"
             android:textStyle="italic" />
 
+        <RelativeLayout
+            android:id="@+id/visibleSetup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_below="@+id/descEdit"
+            android:visibility="gone">
+
+        <Button
+            android:id="@+id/reUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/reDelete"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:text="UPDATE"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/reDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/white"
+            android:text="DELETE"
+            android:backgroundTint="@color/black"/>
+
     </RelativeLayout>
+
+    </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

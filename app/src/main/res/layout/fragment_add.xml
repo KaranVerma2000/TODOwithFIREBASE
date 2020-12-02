@@ -21,13 +21,13 @@
         android:padding="05dp"
         android:background="@drawable/custom_input"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/adddesc"
+        app:layout_constraintEnd_toEndOf="@+id/addDesc"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/adddesc"
+        app:layout_constraintStart_toStartOf="@+id/addDesc"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/adddesc"
+        android:id="@+id/addDesc"
         android:layout_width="351dp"
         android:layout_height="72dp"
         android:layout_marginTop="66dp"
@@ -53,8 +53,8 @@
         android:textColor="@color/teal_200"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/adddesc"
-        app:layout_constraintTop_toBottomOf="@+id/adddesc"
+        app:layout_constraintEnd_toEndOf="@+id/addDesc"
+        app:layout_constraintTop_toBottomOf="@+id/addDesc"
         app:layout_constraintVertical_bias="0.254"
         android:layout_marginRight="52dp">
 
@@ -70,8 +70,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/save"
         app:layout_constraintHorizontal_bias="0.401"
-        app:layout_constraintStart_toStartOf="@+id/adddesc"
-        app:layout_constraintTop_toBottomOf="@+id/adddesc"
+        app:layout_constraintStart_toStartOf="@+id/addDesc"
+        app:layout_constraintTop_toBottomOf="@+id/addDesc"
         app:layout_constraintVertical_bias="0.254">
 
     </Button>

@@ -1,6 +1,8 @@
 package com.example.firebasetodo
 
-class modal(val id : String, val title : String, val desc: String)
+import java.io.Serializable
+
+class modal(val id : String, val title : String, val desc: String) : Serializable
 {
     constructor() : this("","","")
 }
